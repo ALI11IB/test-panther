@@ -3,6 +3,9 @@ const withTM = require("next-transpile-modules")(["styled-components"]);
 
 // next.config.js
 module.exports = withPlugins([[withTM]], {
+  compiler: {
+    styledComponents: true,
+  },
   // ...
   webpack(config, { isServer }) {
     config.module.rules.push({
